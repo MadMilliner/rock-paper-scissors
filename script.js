@@ -1,9 +1,6 @@
 const rock = "rock";
 const paper = "paper";
 const scissors = "scissors";
-// let computerChoice
-
-// let humanChoice = prompt("What do you choose for round 1?", "rock/paper/scissors").toLowerCase();
 
 
 function getComputerChoice() {
@@ -18,8 +15,6 @@ let humanScore = 0
 let computerScore = 0
 
 computerChoice = getComputerChoice();
-// console.log(computerChoice)
-// console.log(humanChoice)
 
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === "rock" && computerChoice === "paper") { computerScore++; console.log("You lose! Paper beats Rock");}
@@ -85,5 +80,3 @@ function playGame() {
 }
 
 playGame()
-// console.log("Human: " + humanScore);
-// console.log("Computer: " + computerScore);
