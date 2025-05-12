@@ -1,9 +1,9 @@
 const rock = "rock";
 const paper = "paper";
 const scissors = "scissors";
-let computerChoice
+// let computerChoice
 
-let humanChoice = prompt("What do you choose?", "rock/paper/scissors").toLowerCase();
+// let humanChoice = prompt("What do you choose for round 1?", "rock/paper/scissors").toLowerCase();
 
 
 function getComputerChoice() {
@@ -18,8 +18,8 @@ let humanScore = 0
 let computerScore = 0
 
 computerChoice = getComputerChoice();
-console.log(computerChoice)
-console.log(humanChoice)
+// console.log(computerChoice)
+// console.log(humanChoice)
 
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === "rock" && computerChoice === "paper") { computerScore++; console.log("You lose! Paper beats Rock");}
@@ -28,16 +28,62 @@ function playRound(humanChoice, computerChoice) {
     else if (humanChoice === "paper" && computerChoice === "scissors") { computerScore++; console.log("You lose! Scissors beats Paper");}
     else if (humanChoice === "scissors" && computerChoice === "rock") { computerScore++; console.log("You lose! Rock beats Scissors");}
     else if (humanChoice === "scissors" && computerChoice === "paper") { humanScore++; console.log("You win! Scissors beats Paper");}
-    else {window.alert("Tie");}
+    else {console.log("Tie");}
   }
   
-  playRound(humanChoice,computerChoice)
-  console.log("Human: " + humanScore);
-  console.log("Computer: " + computerScore);
+function playGame() {
+    function roundOne() {
+        let humanChoice = prompt("What do you choose for round 1?", "rock/paper/scissors").toLowerCase();
+        let computerChoice = getComputerChoice()
+        playRound(humanChoice, computerChoice)
+    }
+    roundOne();
+    console.log("Human: " + humanScore);
+    console.log("Computer: " + computerScore);
 
-// const humanSelection = humanChoice;
-// const computerSelection = computerChoice;
-  
-// playRound(humanSelection, computerSelection);
+    function roundTwo() {  
+    let humanChoice = prompt("What do you choose for round 2?", "rock/paper/scissors").toLowerCase();
+    let computerChoice = getComputerChoice()
+    playRound(humanChoice, computerChoice)
+    console.log("Human: " + humanScore);
+    console.log("Computer: " + computerScore);
+    }
+    roundTwo();
+    console.log("Human: " + humanScore);
+    console.log("Computer: " + computerScore);
 
-  
+    function roundThree() {  
+        let humanChoice = prompt("What do you choose for round 3?", "rock/paper/scissors").toLowerCase();
+        let computerChoice = getComputerChoice()
+        playRound(humanChoice, computerChoice)
+        console.log("Human: " + humanScore);
+        console.log("Computer: " + computerScore);
+        }
+        roundThree();
+        console.log("Human: " + humanScore);
+        console.log("Computer: " + computerScore);
+
+        function roundFour() {
+            let humanChoice = prompt("What do you choose for round 4?", "rock/paper/scissors").toLowerCase();
+            let computerChoice = getComputerChoice()
+            playRound(humanChoice, computerChoice)
+        }
+        roundFour();
+        console.log("Human: " + humanScore);
+        console.log("Computer: " + computerScore);
+    
+        function roundFive() {  
+        let humanChoice = prompt("What do you choose for round 5?", "rock/paper/scissors").toLowerCase();
+        let computerChoice = getComputerChoice()
+        playRound(humanChoice, computerChoice)
+        console.log("Human: " + humanScore);
+        console.log("Computer: " + computerScore);
+        }
+        roundFive();
+        console.log("Human: " + humanScore);
+        console.log("Computer: " + computerScore);
+}
+
+playGame()
+// console.log("Human: " + humanScore);
+// console.log("Computer: " + computerScore);
