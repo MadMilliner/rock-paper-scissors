@@ -1,10 +1,13 @@
 const rock = "rock";
 const paper = "paper";
 const scissors = "scissors";
-var playButton = document.querySelector('button.playRound');
+// var playButton = document.querySelector('button.playRound');
 var score = document.querySelector('div.score');
 var results = document.querySelector('div.results');
 var winner = document.querySelector('div.winner');
+var playRock = document.querySelector("button.rock");
+var playPaper = document.querySelector("button.paper");
+var playScissors = document.querySelector("button.scissors");
 
 
 function getComputerChoice() {
@@ -24,8 +27,7 @@ function winCheck() {
     else if (computerScore === 5) {winner.innerHTML = '<h3>You lose</h3>';}  
 }
 
-function playRound() {
-    let humanChoice = prompt("What do you choose for this round?", "rock/paper/scissors").toLowerCase();
+function playRound(humanChoice) {
     let computerChoice = getComputerChoice();
     if (humanChoice === "rock" && computerChoice === "paper") { computerScore++; results.innerText = "You lose this round! Paper beats Rock";}
     else if (humanChoice === "rock" && computerChoice === "scissors") { humanScore++; results.innerText = "You win this round! Rock beats Scissors";}
@@ -36,12 +38,14 @@ function playRound() {
     else {results.innerText = "Tie";}
     score.innerHTML = '<h4>You: '+humanScore+'<br>Computer: '+computerScore+'</h4>';
     winCheck();
-    console.log(winner);
 }
 
 
 
-playButton.addEventListener('click', playRound);
+// playButton.addEventListener('click', playRound);
+playRock.addEventListener('click', () => playRound('rock'));
+playPaper.addEventListener('click', () => playRound('paper'));
+playScissors.addEventListener('click', () => playRound('scissors'));
 
 // function playGame() {
 //     function roundOne() {

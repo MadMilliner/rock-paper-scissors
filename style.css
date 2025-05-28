@@ -1,0 +1,26 @@
+ .button {
+        width: 75px;
+        height: 25px;
+        background-color: white;
+        color: black;
+        border: 2px dashed #CCCCCC;
+        margin: 10px;
+    }
+
+    .instruction {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .buttonBox {
+        display: flex;
+        margin-bottom: 50px;
+
+
+    }
+
+    .winner {
+        color: red;
+        font-weight: 800;
+    }
