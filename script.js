@@ -20,8 +20,8 @@ let computerScore = 0;
 
 // computerChoice = getComputerChoice();
 function winCheck() {
-    if (humanScore === 5) {winner.innerText = 'You win!';}
-    else if (computerScore === 5) {winner.innerText = 'You lose';}  
+    if (humanScore === 5) {winner.innerHTML = '<h2>You win!</h2>';}
+    else if (computerScore === 5) {winner.innerHTML = '<h3>You lose</h3>';}  
 }
 
 function playRound() {
