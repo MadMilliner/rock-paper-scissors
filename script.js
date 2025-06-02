@@ -2,6 +2,7 @@ const rock = "rock";
 const paper = "paper";
 const scissors = "scissors";
 // var playButton = document.querySelector('button.playRound');
+var instructions = document.querySelector('div.instruction');
 var score = document.querySelector('div.score');
 var results = document.querySelector('div.results');
 var winner = document.querySelector('div.winner');
@@ -21,10 +22,14 @@ function getComputerChoice() {
 let humanScore = 0;
 let computerScore = 0;
 
+let newGame = document.createElement("div");
+
 // computerChoice = getComputerChoice();
 function winCheck() {
-    if (humanScore === 5) {winner.innerHTML = '<h2>You win!</h2>';}
-    else if (computerScore === 5) {winner.innerHTML = '<h3>You lose</h3>';}  
+    if (humanScore === 5) {winner.innerHTML = '<h2 style="color: #00dd00;">You win!</h2>';}
+    else if (computerScore === 5) {winner.innerHTML = '<h3 style="color: red;">You lose</h3>';
+       
+    }   if (humanScore === 5 || computerScore === 5) {newGame.innerHTML = '<button class="button" onClick="window.location.href=window.location.href">New Game</button>'; instructions.appendChild(newGame);}
 }
 
 function playRound(humanChoice) {
