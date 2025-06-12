@@ -26,8 +26,8 @@ let newGame = document.createElement("div");
 
 // computerChoice = getComputerChoice();
 function winCheck() {
-    if (humanScore === 5) {winner.innerHTML = '<h2 style="color: #00dd00;">You win!</h2>';}
-    else if (computerScore === 5) {winner.innerHTML = '<h3 style="color: red;">You lose</h3>';
+    if (humanScore === 5) {winner.innerHTML = '<h2 style="color: white;">You win!</h2>';}
+    else if (computerScore === 5) {winner.innerHTML = '<h3 style="color: white;">You lose</h3>';
        
     }   if (humanScore === 5 || computerScore === 5) {newGame.innerHTML = '<button class="button" onClick="window.location.href=window.location.href">New Game</button>'; instructions.appendChild(newGame);}
 }
@@ -41,7 +41,7 @@ function playRound(humanChoice) {
     else if (humanChoice === "scissors" && computerChoice === "rock") { computerScore++; results.innerText = "You lose this round! Rock beats Scissors";}
     else if (humanChoice === "scissors" && computerChoice === "paper") { humanScore++; results.innerText = "You win this round! Scissors beats Paper";}
     else {results.innerText = "Tie";}
-    score.innerHTML = '<h4>You: '+humanScore+'<br>Computer: '+computerScore+'</h4>';
+    score.innerHTML = '<h4>You: '+humanScore+'<p> Computer: '+computerScore+'</p></h4>';
     winCheck();
 }
 

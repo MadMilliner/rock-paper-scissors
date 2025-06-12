@@ -3,6 +3,7 @@
 :root {
   line-height: 1.5;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  box-sizing: border-box;
 }
 
 html {
@@ -27,6 +28,10 @@ img {
   display: block;
   max-inline-size: 100%;
 }
+
+    :empty {
+        display: none;
+    }
 
     .button {
         width: 100px;
@@ -61,4 +66,9 @@ img {
     .winner {
         /* color: red; */
         font-weight: 800;
+        background: linear-gradient(in hsl longer hue 45deg, red 0 100%);
+        width: 100px;
+        align-content: center;
     }
+    
+
