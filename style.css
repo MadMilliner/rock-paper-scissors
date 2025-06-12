@@ -1,10 +1,48 @@
- .button {
-        width: 75px;
-        height: auto;
+@import "modern-normalize";
+
+:root {
+  line-height: 1.5;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+html {
+  font-size: clamp(1rem, 0.75rem + 1.5vw, 2rem);
+}
+
+h1, h2, h3, h4, h5, figure, p, ol, ul {
+  margin: 0;
+}
+
+ol[role="list"], ul[role="list"] {
+  list-style: none;
+  padding-inline: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+    .button {
+        width: 100px;
+        height: 50px;
         background-color: white;
         color: black;
         border: 2px dashed #CCCCCC;
-        margin: 10px;
+        margin: 20px;
+    }
+
+    .button:hover {
+        box-shadow: 5px 5px 20px #CCCCCC;
+    }
+
+    .button:active {
+        background-color: #CCCCCC;
     }
 
     .instruction {
