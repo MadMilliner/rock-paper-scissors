@@ -29,6 +29,15 @@ img {
   max-inline-size: 100%;
 }
 
+.header {
+    --headheight: 8rem;
+    height: var(--headheight);
+    position: sticky;
+}
+
+.body {
+    height: calc(100vh - var(--headheight));
+}
     :empty {
         display: none;
     }
